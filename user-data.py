@@ -5,4 +5,6 @@ class User-details:
         self.first_name = first_name
         self.last_name = last_name
         self.phone_number = phone_number
-        self.emial = email
+        self.email = email
+    def save_details(self):
+        User-details.details_list.append(self)
