@@ -1,4 +1,4 @@
 import pyperclip
 class User-details:
-    # details-list = []
-    # def __
+    details-list = []
+    
