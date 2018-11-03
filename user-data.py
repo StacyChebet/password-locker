@@ -1,5 +1,5 @@
 import pyperclip
-class User-details:
+class User:
     details-list = []
     def __init__(self, first_name, last_name, phone_number, email):
         self.first_name = first_name
@@ -7,4 +7,4 @@ class User-details:
         self.phone_number = phone_number
         self.email = email
     def save_details(self):
-        User-details.details_list.append(self)
+        User.details_list.append(self)
