@@ -48,3 +48,12 @@ class User:
                     return True
 
                     return False
+
+
+
+    @classmethod
+    def display_users(dls):
+        '''
+        method that returns the users details list
+        '''
+        return dls.details_list
