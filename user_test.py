@@ -81,22 +81,5 @@ class TestUser(unittest.TestCase):
             '''
             self.assertEqual(User.display_users(), User.details_list)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 if __name__ == '__main__':
     unittest.main()
