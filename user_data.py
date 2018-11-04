@@ -6,7 +6,7 @@ class User:
         self.last_name = last_name
         self.phone_number = phone_number
         self.email = email
-    def save_details(self):
+    def save_user(self):
         '''
         Saves new user details into details_list
         '''
