@@ -30,7 +30,7 @@ class TestUser(unittest.TestCase):
             test if user object is saved in user_details
             '''
             self.new_user.save_user()
-            self.assertEqual(len(User.user_details),1)
+            self.assertEqual(len(User.details_list),1)
 
 
 if __name__ == '__main__':
