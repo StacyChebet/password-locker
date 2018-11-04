@@ -14,7 +14,7 @@ class TestUser(unittest.TestCase):
             Runs before each test case
             '''
             self.new_user = User(
-            "Stacy", "Chebet", "0712345678", "staceychebet23@gmail.com")
+            "Stacy", "Chebet", "0712345678", "staceychebet23@gmail.com", "12345")
 
         def test_init(self):
             '''
@@ -24,6 +24,7 @@ class TestUser(unittest.TestCase):
             self.assertEqual(self.new_user.last_name, "Chebet")
             self.assertEqual(self.new_user.phone_number, "0712345678")
             self.assertEqual(self.new_user.email, "staceychebet23@gmail.com")
+            self.assertEqual(self.new_user.password, "12345")
 
         def test_save_user(self):
             '''
@@ -37,7 +38,7 @@ class TestUser(unittest.TestCase):
             checks if it can save multiple user profiles
             '''
             self.new_user.save_user()
-            test_user = User("Her", "Him", "0798765432", "himher@gmail.com")
+            test_user = User("Her", "Him", "0798765432", "himher@gmail.com", "01234")
             test_user.save_user()
             self.assertEqual(len(User.details_list),2)
 
@@ -46,7 +47,7 @@ class TestUser(unittest.TestCase):
             tests if it can remove a user profile from user_details
             '''
             self.new_user.save_user()
-            test_user = User("Her", "Him", "0798765432", "himher@gmail.com")
+            test_user = User("Her", "Him", "0798765432", "himher@gmail.com", "01234")
             test_user.save_user()
 
             self.new_user.delete_user()
@@ -57,7 +58,7 @@ class TestUser(unittest.TestCase):
             checks if it can find user by phone phone_number
             '''
             self.new_user.save_user()
-            test_user = User("Her", "Him", "0798765432", "himher@gmail.com")
+            test_user = User("Her", "Him", "0798765432", "himher@gmail.com", "01234")
             test_user.save_user()
 
             found_user = User.find_by_number("0798765432")
@@ -68,7 +69,7 @@ class TestUser(unittest.TestCase):
             checks if user exists
             '''
             self.new_user.save_user()
-            test_user = User("Her", "Him", "0798765432", "himher@gmail.com")
+            test_user = User("Her", "Him", "0798765432", "himher@gmail.com", "01234")
             test_user.save_user()
 
             user_exists = User.user_exist("0798765432")
