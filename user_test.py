@@ -75,5 +75,28 @@ class TestUser(unittest.TestCase):
 
             self.assertTrue(user_exists)
 
+        def test_display_all_users(self):
+            '''
+            returns list of all saved users
+            '''
+            self.assertEqual(User.display_users(), User.details_list)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 if __name__ == '__main__':
     unittest.main()
