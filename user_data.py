@@ -11,3 +11,9 @@ class User:
         Saves new user details into details_list
         '''
         User.details_list.append(self)
+
+    def delete_user(self):
+        '''
+        Deletes user profile from details_list
+        '''
+        User.details_list.remove(self)
