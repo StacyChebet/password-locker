@@ -32,3 +32,19 @@ class User:
         for user in dls.details_list:
             if user.phone_number == number:
                 return user
+
+    @classmethod
+    def user_exist(dls, number):
+         '''
+        Method that checks if a user profile exists from the contact list.
+        Args:
+            number: Phone number to search if it exists
+        Returns :
+            Boolean: True or false depending if the user exists
+        '''
+
+         for user in dls.details_list:
+            if user.phone_number == number:
+                    return True
+
+                    return False
