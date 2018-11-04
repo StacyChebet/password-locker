@@ -3,11 +3,11 @@ from user_data import User
 import pyperclip
 
 class TestUser(unittest.TestCase):
-        # def tearDown(self):
-        #     '''
-        #     Does clean up after each test has run
-        #     '''
-        #     User.details_list = []
+        def tearDown(self):
+            '''
+            Does clean up after each test has run
+            '''
+            User.details_list = []
 
         def setUp(self):
             '''
